@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,7 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DTO\Right.cs" />
+    <Compile Include="DTO\Role.cs" />
+    <Compile Include="DTO\Session.cs" />
+    <Compile Include="IAuthenticationService.cs" />
+    <Compile Include="IAuthorizationService.cs" />
+    <Compile Include="Messaging\AuthenticationService\IsValidRequest.cs" />
+    <Compile Include="Messaging\AuthenticationService\IsValidResponse.cs" />
+    <Compile Include="Messaging\AuthenticationService\SignInRequest.cs" />
+    <Compile Include="Messaging\AuthenticationService\SignInResponse.cs" />
+    <Compile Include="Messaging\AuthenticationService\SignOutRequest.cs" />
+    <Compile Include="Messaging\AuthenticationService\SignOutResponse.cs" />
+    <Compile Include="Messaging\AuthorizationService\GetAllRolesRequest.cs" />
+    <Compile Include="Messaging\AuthorizationService\GetAllRolesResponse.cs" />
+    <Compile Include="Messaging\AuthorizationService\IsAuthorizedRequest.cs" />
+    <Compile Include="Messaging\AuthorizationService\IsAuthorizedResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
