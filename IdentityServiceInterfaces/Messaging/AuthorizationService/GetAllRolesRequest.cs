@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Runtime.Serialization;
-using IdentityServiceInterfaces.DTO;
+using IdentityServiceInterfaces.Messaging.Base;
 
 namespace IdentityServiceInterfaces.Messaging.AuthorizationService
 {
     [DataContract, Serializable]
-    public class GetAllRolesRequest
+    public class GetAllRolesRequest:RequestBase
     {
-        public Session Session { get; set; }
     }
 }

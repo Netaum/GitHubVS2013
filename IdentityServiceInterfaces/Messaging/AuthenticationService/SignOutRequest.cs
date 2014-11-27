@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Runtime.Serialization;
-using IdentityServiceInterfaces.DTO;
+using IdentityServiceInterfaces.Messaging.Base;
 
 namespace IdentityServiceInterfaces.Messaging.AuthenticationService
 {
     [DataContract, Serializable]
-    public class SignOutRequest
+    public class SignOutRequest:RequestBase
     {
-        [DataMember]
-        public Session Session { get; set; }
+       
     }
 }

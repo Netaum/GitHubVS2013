@@ -1,14 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 using IdentityServiceInterfaces.DTO;
-using IdentityServiceInterfaces.Messaging.Base;
 
 namespace IdentityServiceInterfaces.Messaging.AuthorizationService
 {
     [DataContract, Serializable]
-    public class IsAuthorizedRequest:RequestBase
+    public class GetAllRolesResponse
     {
         [DataMember]
-        public Right Right { get; set; }
+        public IEnumerable<Role> Roles { get; set; }
     }
 }

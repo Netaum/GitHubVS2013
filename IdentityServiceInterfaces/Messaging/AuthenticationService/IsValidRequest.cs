@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Runtime.Serialization;
-using IdentityServiceInterfaces.DTO;
+using IdentityServiceInterfaces.Messaging.Base;
 
 namespace IdentityServiceInterfaces.Messaging.AuthenticationService
 {
     [DataContract, Serializable]
-    public class IsValidRequest
+    public class IsValidRequest : RequestBase
     {
-        [DataMember]
-        public Session Session { get; set; }
+       
     }
 }
